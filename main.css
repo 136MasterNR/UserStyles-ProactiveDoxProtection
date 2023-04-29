@@ -1,0 +1,194 @@
+/* ==UserStyle==
+@name           Proactive Dox Protection - For Streamers!
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@preprocessor   uso
+@advanced dropdown strict-level "Strict Level:" {
+strict-level-low "Low" <<<EOT.strict-level-lowEOT;
+
+strict-level-high "High" <<<EOT
+EOT;
+}
+
+@advanced dropdown extreme-mode "Extreme Protection:" {
+extreme-mode-off "Disabled" <<<EOT
+/*
+EOT;
+
+extreme-mode-on "Enabled" <<<EOT
+EOT;
+}
+==/UserStyle== */
+
+@-moz-document regexp("^(?!.*(google|youtube)).*ip.*") {/*[[extreme-mode]]*/
+   body {
+      display: none;
+   }
+   html:before {
+      border-radius: 10px!important;
+      text-align: center!important;
+      position: absolute!important;
+      margin-left: calc(50% - 250px)!important;
+      margin-top: 15vh!important;
+      border: solid #ffe898 50px!important;
+      padding-bottom: 100px!important;
+      background-color: #ffe898!important;
+      background-image: url("https://img.freepik.com/free-vector/yellow-danger-warning-sign-vector-art-illustration_56104-872.jpg?w=996&t=st=1682776474~exp=1682777074~hmac=73d41ee09f8ffe4b670a7d1df2ac6f6a0b60b8388c0bc0ab3159610c3f7f8b42")!important;
+      background-repeat: no-repeat!important;
+      background-size: contain!important;
+      width: 400px!important;
+      height: 300px!important;
+      font-weight: bold!important;
+      font-size: 1.25vw!important;
+      text-shadow: 0px 4px #ffd975!important;
+      content: "Proactive Dox Protection"!important;
+      box-sizing: unset!important;
+   }
+   html:after {
+      border-radius: 10px!important;
+      text-align: center!important;
+      position: absolute;
+      margin-left: calc(50% - 250px)!important;
+      margin-top: calc(15vh + 310px)!important;
+      border: solid transparent 50px!important;
+      width: 400px!important;
+      height: 300px!important;
+      text-decoration: underline dotted;
+      font-size: 1vw;
+      content: "The extreme proactive dox protection has blocked this content for potential self-dox on record. Disable extreme protection to unblock this content.";
+      box-sizing: unset!important;
+   }
+   
+   /**/
+}
+@-moz-document domain("google.com") {
+   .b0KoTc,
+   .uU7dJb,
+   .aajZCb,
+   #gws-output-pages-elements-homepage_additional_languages__als,
+   .aiAXrc,
+   .fMYBhe,
+   #lu_map,
+   .WJD0pf
+   {display:none!important}
+
+   .RNNXgb {
+      border-radius: 25px!important;
+   }
+}
+
+@-moz-document regexp("https?://(www.)google.com/maps.*") {
+   body /*[[strict-level]]*/ {
+      display: none;
+   }
+   html:before /*[[strict-level]]*/ {
+      border-radius: 10px;
+      text-align: center;
+      position: absolute;
+      margin-left: calc(50% - 250px);
+      margin-top: 15vh;
+      border: solid #ffe898 50px;
+      padding-bottom: 100px!important;
+      background-color: #ffe898;
+      background-image: url("https://img.freepik.com/free-vector/yellow-danger-warning-sign-vector-art-illustration_56104-872.jpg?w=996&t=st=1682776474~exp=1682777074~hmac=73d41ee09f8ffe4b670a7d1df2ac6f6a0b60b8388c0bc0ab3159610c3f7f8b42");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 400px;
+      height: 300px;
+      font-weight: bold;
+      font-size: 1.25vw;
+      text-shadow: 0px 4px #ffd975;
+      content: "Proactive Dox Protection";
+   }
+   html:after /*[[strict-level]]*/ {
+      border-radius: 10px;
+      text-align: center;
+      position: absolute;
+      margin-left: calc(50% - 250px);
+      margin-top: calc(15vh + 310px);
+      border: solid transparent 50px;
+      width: 400px;
+      height: 300px;
+      text-decoration: underline dotted;
+      font-size: 1vw;
+      content: "The proactive dox protection has blocked this content for potential self-dox on record. To disable this protection, set the strict-level to low.";
+   }
+}
+
+@-moz-document regexp("https?://(www.)bing.com/maps.*") {
+   body /*[[strict-level]]*/ {
+      display: none;
+   }
+   html:before /*[[strict-level]]*/ {
+      border-radius: 10px;
+      text-align: center;
+      position: absolute;
+      margin-left: calc(50% - 250px);
+      margin-top: 15vh;
+      border: solid #ffe898 50px;
+      padding-bottom: 100px!important;
+      background-color: #ffe898;
+      background-image: url("https://img.freepik.com/free-vector/yellow-danger-warning-sign-vector-art-illustration_56104-872.jpg?w=996&t=st=1682776474~exp=1682777074~hmac=73d41ee09f8ffe4b670a7d1df2ac6f6a0b60b8388c0bc0ab3159610c3f7f8b42");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 400px;
+      height: 300px;
+      font-weight: bold;
+      font-size: 1.25vw;
+      text-shadow: 0px 4px #ffd975;
+      content: "Proactive Dox Protection";
+   }
+   html:after /*[[strict-level]]*/ {
+      border-radius: 10px;
+      text-align: center;
+      position: absolute;
+      margin-left: calc(50% - 250px);
+      margin-top: calc(15vh + 310px);
+      border: solid transparent 50px;
+      width: 400px;
+      height: 300px;
+      text-decoration: underline dotted;
+      font-size: 1vw;
+      content: "The proactive dox protection has blocked this content for potential self-dox on record. To disable this protection, set the strict-level to low.";
+   }
+}
+
+@-moz-document regexp("^https?://(?!whatismyipaddress\\.com/ip-lookup).*whatismyipaddress\\.com.*") {
+   .fl-module-wipa-static-html > div:nth-child(1):after /*[[strict-level]]*/ {
+      content: "Proactive dox protection has blocked this content. Unblock it by setting the strict level to low.";
+   }
+   .ip-detail /*[[strict-level]]*/ {
+      display: none!important;
+   }
+}
+
+@-moz-document regexp("https?://(www.)ipaddress.my.*") {
+   div.container:nth-child(2) /*[[strict-level]]*/ {
+      display: none!important;
+   }
+   
+   body:after /*[[strict-level]]*/ {
+      content: "Proactive dox protection has blocked this content. Unblock it by setting the strict level to low.";
+   }
+}
+
+@-moz-document regexp("https?://(www.)whatismyip.com.*") {
+   html body div#___gatsby div#gatsby-focus-wrapper div.wrapper section#sec-hero div#tool-what-is-my-ip * /*[[strict-level]]*/ {
+      display: none!important;
+   }
+   
+   html body div#___gatsby div#gatsby-focus-wrapper div.wrapper section#sec-hero div#tool-what-is-my-ip:after /*[[strict-level]]*/ {
+      content: "Proactive dox protection has blocked this content. Unblock it by setting the strict level to low.";
+   }
+}
+
+@-moz-document regexp("https?://nordvpn.com.*") {
+   .py-lg-14 * /*[[strict-level]]*/,
+   .js-StatusBar {
+      display: none!important;
+   }
+   
+   .py-lg-14:after /*[[strict-level]]*/ {
+      content: "Proactive dox protection has blocked this content. Unblock it by setting the strict level to low.";
+   }
+}
