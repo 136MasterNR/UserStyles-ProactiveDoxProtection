@@ -19,11 +19,11 @@ extreme-mode-on "Enabled" <<<EOT
 EOT;
 }
 
-@advanced text ignore-domains "Ignore Domains\n Use | to seperate" "wikipedia.org"
-@advanced text ignore-words "Ignore Words" "search|iphone"
+@advanced text ignore-domains "Exclude Domains\n Use | to seperate" "wikipedia.org"
+@advanced text ignore-words "Exclude Words" "search|search_query|iphone"
 ==/UserStyle== */
 
-@-moz-document regexp("^(?!.*\b(?:/*[[ignore-words]]*/)\b)(?!.*\b(?:www\.)?/*[[ignore-domains]]*/\b)(?=.*ip).*") {/*[[extreme-mode]]*/
+@-moz-document regexp("^(?!.*(?:^|\W)(?:/*[[ignore-words]]*/)(?:$|\W))(?!.*\b(?:/*[[ignore-domains]]*/)\b)(?=.*ip).*") {/*[[extreme-mode]]*/
    body {
       display: none;
    }
@@ -122,7 +122,7 @@ EOT;
       height: 300px;
       text-decoration: underline dotted;
       font-size: 1vw;
-      content: "The proactive dox protection has blocked this content for potential self-dox on record. To disable this protection, set the strict-level to low.";
+      content: "The proactive dox protection has blocked this content for potential self-dox on stream. To disable this protection, set the strict-level to low.";
    }
 }
 
